@@ -1,0 +1,39 @@
+@use 'variables' as *;
+
+@function to-vw($px, $design){
+    $vw: ($px / $design) * 100vw;
+}
+
+@mixin mobile(){
+    @media (max-width: $breakpoint){
+        @content;
+    }
+}
+
+@mixin adaptive($property, $desk, $mob: $desk){
+    #{$property}: to-vw($desk, $desktop-design);
+    @if $mob != null{
+        @include mobile{
+            #{$property}: to-vw($mob, $mobile-design);
+        }
+    }
+    @else{
+        #{$property}: to-vw($desk, $mobile-design);
+    }
+}
+
+@mixin content{
+    position: relative;
+    width: 100%;
+    &__content{
+        @include adaptive(width, $content-desktop, $content-mobile);
+        position: relative;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+    &__bg{
+        position: absolute;
+        inset: 0;
+        background-color: $color-bg;
+    }
+}
