@@ -7,19 +7,22 @@ export default function Services(){
     return(
         <section className="services">
             <h2 className="services__title">{services.title}</h2>
-            <Swiper
-                className="services__swiper"
-                spaceBetween={0}
-                slidesPerView={3.5}
+            <div className="services__container">
+                <Swiper
+                    className="services__swiper"
+                    // spaceBetween={0}
+                    slidesPerView={3.53}
+                    
+                >
+                    {services.list.map((item, index)=>(
+                        <SwiperSlide>
+                            <Card {...item}/>
+                        </SwiperSlide>
+                    ))}
                 
-            >
-                {services.list.map((item, index)=>(
-                    <SwiperSlide>
-                        <Card {...item}/>
-                    </SwiperSlide>
-                ))}
+                </Swiper>
+            </div>
             
-            </Swiper>
         </section> 
     )
 }

@@ -1,17 +1,26 @@
 @use '../../styles' as *;
 
 .services{
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    @include adaptive(gap, 40, 16);
+    position: relative;
     &__title{
         color: $color-darkText;
         @include adaptive(font-size, 32, 28);
         font-family: SemiboldText;
     }
-    &__swiper{
-        width: calc(100% + to-vw(240, $desktop-design));
+    &__container{
         @include adaptive (margin-left, -120, -20);
         @include adaptive (margin-right, -120, -20);
-        @include mobile{
-            width: calc(100% + to-vw(20, $mobile-design));
+        width: 100vw;
+    }
+    &__swiper{
+        
+        .swiper-wrapper{
+            @include adaptive (padding-left, 120, 20);
+            @include adaptive (padding-right, 120, 20);
         }
     }
 }

@@ -5,7 +5,7 @@
     display: block;
     @include adaptive(max-width, 384);
     @include adaptive(max-height, 384);
-    @include adaptive(border-radius, 20);
+    @include adaptive(border-radius, 25);
     overflow: hidden;
     &__buttons{
         position: absolute;
@@ -36,8 +36,8 @@
     };
     &__title{
         position: absolute;
-        bottom: 20%;
-        left: 5%;
+        bottom: 21%;
+        left: 10%;
         font-family: SemiboldText;
         @include adaptive(font-size, 32, 12);
         color: $color-white;
