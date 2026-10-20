@@ -1,0 +1,9 @@
+@use '../../styles' as *;
+
+.services{
+    &__title{
+        color: $color-darkText;
+        @include adaptive(font-size, 32, 28);
+        font-family: SemiboldText;
+    }
+}
