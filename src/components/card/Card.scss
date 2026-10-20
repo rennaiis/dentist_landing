@@ -36,8 +36,7 @@
     };
     &__title{
         position: absolute;
-        inset: 0;
-        top: 70%;
+        bottom: 20%;
         left: 5%;
         font-family: SemiboldText;
         @include adaptive(font-size, 32, 12);

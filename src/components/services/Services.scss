@@ -6,4 +6,12 @@
         @include adaptive(font-size, 32, 28);
         font-family: SemiboldText;
     }
+    &__swiper{
+        width: calc(100% + to-vw(240, $desktop-design));
+        @include adaptive (margin-left, -120, -20);
+        @include adaptive (margin-right, -120, -20);
+        @include mobile{
+            width: calc(100% + to-vw(20, $mobile-design));
+        }
+    }
 }
