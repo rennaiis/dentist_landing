@@ -1,12 +1,15 @@
 @use '../../styles' as *;
 .button{
-    font-family: SemiboldText;
+    font-family: MediumText;
     line-height: 1.4em;
     @include padding-vertical(10, 4);
     
     color: $color-white;
-    @include adaptive(border-radius, 20);
+    @include adaptive(border-radius, 20, 12);
+    display: flex;
     &__icon{
+        align-items: center;
+        justify-content: center;
         @include adaptive(width, 12, 7);
         img{
             width: 100%;
@@ -14,11 +17,11 @@
     }
     &_dark{
         @include adaptive(font-size, 16, 12);
-        @include padding-sides(32, 12);
+        @include padding-sides(32, 18);
         background: radial-gradient(circle, $button-light 0%, $button-dark 100%);
     }
     &_round{
-        @include padding-sides(15, 6);
+        @include padding-sides(15, 9);
         background: radial-gradient(circle, $button-light 0%, $button-dark 100%);
     }
     &_mint{

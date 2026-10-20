@@ -10,8 +10,12 @@ export default function Services(){
             <div className="services__container">
                 <Swiper
                     className="services__swiper"
-                    // spaceBetween={0}
-                    slidesPerView={3.53}
+                    slidesPerView={2.4}
+                    breakpoints={{
+                        728:{
+                            slidesPerView: 3.53,
+                        }
+                    }}
                     
                 >
                     {services.list.map((item, index)=>(

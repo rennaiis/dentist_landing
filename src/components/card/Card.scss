@@ -3,17 +3,27 @@
 .card{
     position: relative;
     display: block;
-    @include adaptive(max-width, 384);
-    @include adaptive(max-height, 384);
-    @include adaptive(border-radius, 25);
+    @include adaptive(max-width, 384, 154);
+    @include adaptive(height, 384, 154);
+    @include adaptive(border-radius, 25, 8);
     overflow: hidden;
+    @include mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
     &__buttons{
         position: absolute;
         bottom: 0;
         right: 0;
         display: flex;
-        @include adaptive(gap, 10);
+        @include adaptive(gap, 10, 0);
         @include adaptive(max-height, 42);
+        @include mobile{
+            position: relative;
+            width: 100%;
+            justify-content: space-between;
+        }
         
     }
     &__picture{
@@ -21,6 +31,7 @@
         mask-image: url('images/mask.svg');
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
+        overflow: hidden;
         img{
             width: 100%;
         };
@@ -33,14 +44,19 @@
             width: 100%;
             height: 100%
         }
+        @include mobile{
+            mask-image: none !important;
+            @include adaptive(border-radius, 8);
+        }
     };
     &__title{
         position: absolute;
-        bottom: 21%;
-        left: 10%;
+        bottom: 23%;
+        left: 9%;
         font-family: SemiboldText;
-        @include adaptive(font-size, 32, 12);
+        @include adaptive(font-size, 32, 12.8);
         color: $color-white;
         
     }
 }
+
