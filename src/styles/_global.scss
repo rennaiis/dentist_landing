@@ -1,10 +1,11 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
 body{
     background-color: $color-bg;
-    font-family: MediumText sans-serif;
-    @include adaptive(padding-top, 50, 30);
-    @include adaptive(padding-bottom, 50, 30);
-    @include adaptive (padding-left, 120, 20);
-    @include adaptive (padding-right, 120, 20);
+    font-family: MediumText, sans-serif;
+    @include padding-sides(120, 20);
+    @include padding-vertical(50, 30)
 }
 
 
@@ -12,7 +13,6 @@ body{
 	padding: 0px;
 	margin: 0px;
 	border: none;
-    font-family: TextFont;
 	scroll-behavior: smooth;
 }
 

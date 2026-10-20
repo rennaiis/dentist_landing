@@ -1,0 +1,30 @@
+@use '../../styles' as *;
+.button{
+    font-family: SemiboldText;
+    line-height: 1.4em;
+    @include padding-vertical(10, 4);
+    
+    color: $color-white;
+    @include adaptive(border-radius, 20);
+    &__icon{
+        @include adaptive(width, 12, 7);
+        img{
+            width: 100%;
+        }
+    }
+    &_dark{
+        @include adaptive(font-size, 16, 12);
+        @include padding-sides(32, 12);
+        background: radial-gradient(circle, $button-light 0%, $button-dark 100%);
+    }
+    &_round{
+        @include padding-sides(15, 6);
+        background: radial-gradient(circle, $button-light 0%, $button-dark 100%);
+    }
+    &_mint{
+        @include adaptive(font-size, 14, 14);
+         @include padding-sides(32, 12);
+        background-color: $color-mint;
+       
+    }
+}

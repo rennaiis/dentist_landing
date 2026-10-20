@@ -1,7 +1,8 @@
 @use 'variables' as *;
 
 @function to-vw($px, $design){
-    $vw: ($px / $design) * 100vw;
+    $vw: calc($px / $design) * 100vw;
+    @return $vw
 }
 
 @mixin mobile(){
@@ -9,7 +10,21 @@
         @content;
     }
 }
+@mixin padding($top, $right: $top, $bottom: $top, $left: $right){
+    @include adaptive(padding-left, $left);
+    @include adaptive(padding-right, $right);
+    @include adaptive(padding-top, $top);
+    @include adaptive(padding-bottom, $bottom);
+}
+@mixin padding-sides($value, $value-m: $value){
+    @include adaptive(padding-left, $value, $value-m);
+    @include adaptive(padding-right, $value, $value-m);
+}
 
+@mixin padding-vertical($value, $value-m: $value){
+    @include adaptive(padding-top, $value, $value-m);
+    @include adaptive(padding-bottom, $value, $value-m);
+}
 @mixin adaptive($property, $desk, $mob: $desk){
     #{$property}: to-vw($desk, $desktop-design);
     @if $mob != null{

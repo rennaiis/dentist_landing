@@ -31,7 +31,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -64,7 +64,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -97,7 +97,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -130,7 +130,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -163,7 +163,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -196,7 +196,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -229,7 +229,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -262,7 +262,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
@@ -295,7 +295,7 @@ export const services = {
                 text: 'Консультация'
             }, 
             arrow: {
-                mod: 'dark', 
+                mod: 'round', 
                 href: '',
                 icon: 'icons/arrow.svg'
             }
