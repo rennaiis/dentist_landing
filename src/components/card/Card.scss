@@ -51,11 +51,16 @@
     };
     &__title{
         position: absolute;
-        bottom: 23%;
-        left: 9%;
+        bottom: 21%;
+        left: 10%;
+        
         font-family: SemiboldText;
         @include adaptive(font-size, 32, 12.8);
         color: $color-white;
+        @include mobile{
+            bottom: 23%;
+            left: 9%;
+        }
         
     }
 }

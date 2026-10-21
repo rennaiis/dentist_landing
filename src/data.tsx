@@ -324,7 +324,7 @@ export const form = {
         text: 'Записаться на приём',
         mod: 'mint'
     },
-    agreement: "Я даю свое согласие на",
+    agreement: "я даю свое согласие на",
     link: {
         text: 'обработку персональных данных',
         href: ''

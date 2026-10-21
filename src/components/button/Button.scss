@@ -26,7 +26,7 @@
     }
     &_mint{
         @include adaptive(font-size, 14, 14);
-         @include padding-sides(32, 12);
+         @include padding-sides(21, 12);
         background-color: $color-mint;
        
     }

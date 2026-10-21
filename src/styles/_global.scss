@@ -2,11 +2,14 @@
 @use 'mixins' as *;
 
 body{
+	@include padding-sides(120, 20);
+    @include padding-vertical(50, 20);
     background-color: $color-bg;
     font-family: MediumText, sans-serif;
-    @include padding-sides(120, 20);
-    @include padding-vertical(50, 20)
+   
 }
+
+@layer reset{
 
 
 * {
@@ -27,7 +30,6 @@ body{
 a, a:link, a:visited, a:hover, a:active, a:focus {
     text-decoration: none;
     color: inherit;
-    
 }
 
 a:hover  {
@@ -102,4 +104,5 @@ legend {
 
 input[type='file'] {
 	max-width: 100%;
+}
 }
