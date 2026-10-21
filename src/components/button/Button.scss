@@ -7,9 +7,10 @@
     color: $color-white;
     @include adaptive(border-radius, 20, 12);
     display: flex;
+    align-items: center;
+    justify-content: center;
     &__icon{
-        align-items: center;
-        justify-content: center;
+        
         @include adaptive(width, 12, 7);
         img{
             width: 100%;
@@ -26,8 +27,14 @@
     }
     &_mint{
         @include adaptive(font-size, 14, 14);
-         @include padding-sides(21, 12);
+        @include padding-sides(21, 12);
+        @include padding-vertical(10, 12);
         background-color: $color-mint;
+        @include adaptive(border-radius, 20);
+        @include mobile{
+            width: 100%;
+            
+        }
        
     }
 }

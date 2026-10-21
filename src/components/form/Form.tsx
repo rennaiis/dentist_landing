@@ -21,11 +21,17 @@ export default function Form(){
                     ))}
                     <div className="form__button"><Button {...form.button}/></div>
                 </div>
-                <span className="form__agreement">
+                <span className="form__agreement">     
                     <input className="form__checkbox" type="checkbox" id="agree"/>
-                    <label className="form__agreeText" htmlFor="agree">{`${form.agreement}`} 
-                        <a className="form__agreeLink" href={form.link.href}>{form.link.text}</a>
-                    </label> 
+                    <label className="form__caption" htmlFor="agree">
+                        <span>
+                            <span className="form__agreeText" >{`${form.agreement}`}</span>
+                            <span>{"\u00A0"}</span>
+                            <a className="form__agreeLink" href={form.link.href}>{form.link.text}</a>
+                        </span>
+                    </label>
+                    
+                        
                 </span>
             </form>
         </section> 
