@@ -7,7 +7,9 @@ export default function Form(){
     return(
         <section className="form">
             <div className="form__bg">
-                
+                <div className="form__imgContainer">
+                    <img className="form__img" src={form.imgLink} alt="" />
+                </div>
             </div>
             <form className="form__content">
                 <h3 className="form__title">{form.header}</h3>
@@ -24,7 +26,7 @@ export default function Form(){
                 <span className="form__agreement">     
                     <input className="form__checkbox" type="checkbox" id="agree"/>
                     <label className="form__caption" htmlFor="agree">
-                        <span>
+                        <span className="form__agreeString">
                             <span className="form__agreeText" >{`${form.agreement}`}</span>
                             <span>{"\u00A0"}</span>
                             <a className="form__agreeLink" href={form.link.href}>{form.link.text}</a>

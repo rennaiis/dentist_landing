@@ -328,5 +328,6 @@ export const form = {
     link: {
         text: 'обработку персональных данных',
         href: ''
-    }
+    },
+    imgLink: 'images/model-full.png'
 }

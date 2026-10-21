@@ -4,6 +4,7 @@
     position: relative;
     width: 100%;
     @include adaptive(margin-top, 50, 24);
+    
     &__content{
         position: relative;
         @include padding(60, 64, 38, 415);
@@ -13,19 +14,51 @@
         @include mobile{
             @include padding(80, 40, 240, 40);
         }
+        overflow: visible;
     }
     &__bg{
         position: absolute;
         inset: 0;
-        background-color: rgb(34, 34, 133);
+        width: 100%;
+        height: 100%;
+        background-color: $gr-base;
+        background-image: 
+            radial-gradient(circle at 20% 90%, $gr-light, transparent 25%),
+            radial-gradient(circle at 70% 10%, $gr-dark, transparent 70%);
         mask-image: url('images/bg-mask.svg');
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
+        
         @include mobile{
             mask-image:url('images/bg-mask-m.svg');
-            
+            background-image: 
+                radial-gradient(circle at 60% 98%, $gr-light, transparent 30%),
+                radial-gradient(circle at 10% 40%, $gr-dark, transparent 70%);
         }
     }
+
+    &__img{
+        width: 100%;
+        max-height: none;
+        height: auto;
+        object-fit: contain;
+        object-position: top-center;
+    }
+    &__imgContainer{
+        position: absolute;
+        overflow: hidden;
+        @include adaptive(width, 357, 290);
+        @include adaptive(height, 345, 243);
+        mask-size: 100% 100%;
+        mask-repeat: no-repeat;
+        bottom: 0;
+        left: 4.5%;     
+        @include mobile{
+            bottom: 0;
+            left: 10%;
+        } 
+    }
+    
     &__title{
         font-family: SemiboldText;
         @include adaptive(font-size, 22, 20);
@@ -60,7 +93,6 @@
         }
     }
     &__input{
-        
         font-family: MediumText;
         background-color: $color-white;
         @include adaptive(padding, 12);
@@ -93,6 +125,7 @@
         display: flex; 
         align-items:center;
         @include adaptive(gap, 10);
+        
         &::before{
             content: '';
             @include adaptive(width, 20);
@@ -107,6 +140,7 @@
     &__agreement{
         display: flex;
         @include adaptive(margin-top, 0, -10);
+       
     }
     &__agreeText{
         font-family: MediumText;
@@ -115,7 +149,10 @@
         color: $color-white;
         @include mobile{
             line-height: 1em;
-        }
+        };
+        display: inline-flex;
+        align-items: center;
+        flex-wrap: wrap; 
     }
     &__agreeLink{
         font-family: BoldText;
