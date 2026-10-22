@@ -195,6 +195,22 @@
                 background-image: url('icons/tick-blue.svg');
             }
         }
+    }
+
+    &__result{
+        position: absolute;
+        bottom: 4%;
+        color: $color-bg;
+        @include adaptive(font-size, 12);
+        font-family: BoldText;
+        height: min-content;
+
+        @include mobile{
+            padding: 0.5em;
+            background-color: $gr-dark;
+            border-radius: 0.5em;
+            top: 70%;
+        }
 
     }
 

@@ -10,7 +10,7 @@ export default function Button(buttonProps: ButtonProps){
                     {buttonProps.text}
                     {buttonProps.icon && <img className="button__icon" src={buttonProps.icon}/>}
                 </a> : 
-                <button className={`button ${buttonProps.mod ? `button_${buttonProps.mod}` : ``}`}>
+                <button type="submit" className={`button ${buttonProps.mod ? `button_${buttonProps.mod}` : ``}`}>
                     {buttonProps.text}
                     {buttonProps.icon && <img className="button__icon" src={buttonProps.icon}/>}
                 </button>}

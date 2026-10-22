@@ -317,7 +317,8 @@ export const form = {
         {
             caption: 'Введите номер телефона',
             type: 'tel',
-            placeholder: '+7...'
+            placeholder: '+7...', 
+            pattern:"^[+][0-9]{10,15}$"
         }
     ],
     button: {
