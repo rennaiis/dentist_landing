@@ -7,7 +7,7 @@
     
     &__content{
         position: relative;
-        @include padding(60, 64, 38, 415);
+        @include padding(65, 64, 35, 415);
         display: flex;
         flex-direction: column;
         @include adaptive(gap, 21, 17);
@@ -16,7 +16,7 @@
         }
         overflow: visible;
     }
-    &__bg{
+    &__gradient{
         position: absolute;
         inset: 0;
         width: 100%;
@@ -30,13 +30,31 @@
         mask-repeat: no-repeat;
         
         @include mobile{
+            display: none;
+        }
+    }
+    &__bg{
+        position: absolute;
+        inset: 0;
+        @include mobile{
             mask-image:url('images/bg-mask-m.svg');
+            background-color: $gr-base;
             background-image: 
                 radial-gradient(circle at 60% 98%, $gr-light, transparent 30%),
                 radial-gradient(circle at 10% 40%, $gr-dark, transparent 70%);
+            mask-size: 100% 100%;
+            mask-repeat: no-repeat;
         }
     }
-
+    &__cover{
+        position: absolute;
+        left: 0;
+        bottom: -0.5%;
+        @include adaptive(width, 141);
+        @include mobile{
+            display: none;
+        }
+    }
     &__img{
         width: 100%;
         max-height: none;
@@ -51,7 +69,7 @@
         @include adaptive(height, 345, 243);
         mask-size: 100% 100%;
         mask-repeat: no-repeat;
-        bottom: 0;
+        bottom: 0.5%;
         left: 4.5%;     
         @include mobile{
             bottom: 0;

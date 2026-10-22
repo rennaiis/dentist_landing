@@ -1,15 +1,16 @@
 import { form } from "../../data";
 import Button from "../button/Button";
-import Picture from "../Picture";
 import './Form.scss'
 
 export default function Form(){
     return(
         <section className="form">
             <div className="form__bg">
+                <div className="form__gradient"></div>
                 <div className="form__imgContainer">
                     <img className="form__img" src={form.imgLink} alt="" />
                 </div>
+                <img className="form__cover" src={"images/cover.svg"} alt="" />
             </div>
             <form className="form__content">
                 <h3 className="form__title">{form.header}</h3>
