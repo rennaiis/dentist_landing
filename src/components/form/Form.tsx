@@ -25,11 +25,14 @@ export default function Form(){
             setError("Неверный формат телефона")
         }
         if (!agreed) {
-            setError('согласие необходимо');
+            setError('Cогласие необходимо');
             valid = false;
         }
         if (valid) {
             setSuccess(true);
+            setTimeout(() => {
+                setSuccess(false);
+            }, 3000);
         }
     }
     return(
@@ -91,9 +94,15 @@ export default function Form(){
                         </span>
                     </label>                       
                 </span>
+                {success ? 
                 <div className="form__result">
-                    {success ?  'Форма успешно отправлена' : error ? error : ''}
+                    Форма успешно отправлена
                 </div>
+                  : error ? 
+                <div className="form__result">
+                    {error}
+                </div> : <></>}
+                
             </form>
         </section> 
     )
