@@ -18,7 +18,7 @@ export default function Services(){
                     }}
                     
                 >
-                    {services.list.map((item, index)=>(
+                    {services.list.map((item)=>(
                         <SwiperSlide>
                             <Card {...item}/>
                         </SwiperSlide>
